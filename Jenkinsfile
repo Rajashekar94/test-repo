@@ -1,3 +1,8 @@
+
+
+def call(body) {
+body()
+            
 properties([gitLabConnection(''), [$class: 'GitlabLogoProperty', repositoryName: ''],
             parameters([choice(choices: ['Ubuntu_16.04', 'Ubuntu_18.06'], description: 'Select the OS ', name: 'Select OS')])])
 node {
@@ -26,6 +31,7 @@ stage('Terraform apply'){
     }
    
     }
+}
 
 
  
